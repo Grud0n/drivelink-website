@@ -28,9 +28,9 @@ Statische Landing Page für DriveLink (Support, Datenschutz, Impressum), gehoste
 
 ## Vor dem Live-Schalten
 
-- **Impressum** ([impressum.html](impressum.html)) ausfüllen: echter Name, Anschrift.
+- ~~Impressum ausfüllen~~ erledigt (echte Anschrift eingetragen).
 - **Datenschutzerklärung** ([datenschutz.html](datenschutz.html)) ist ein Entwurf – vor Veröffentlichung im App Store rechtlich prüfen lassen.
-- Support-E-Mail `support@drivelink-app.de` beim E-Mail-Provider/Registrar einrichten (oder Weiterleitung auf bestehende Adresse).
+- Support-Kontakt läuft vorerst direkt über `support.drivelink.app@gmail.com` (kein `support@drivelink-app.de`, da INWX-E-Mail-Hosting/MailProxy extra kostet – bei Bedarf später per ImprovMX o. ä. kostenlos nachrüsten).
 
 ## Lokal ansehen
 
