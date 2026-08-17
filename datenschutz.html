@@ -6,6 +6,24 @@
   <title>Datenschutzerklärung – DriveLink</title>
   <link rel="icon" type="image/png" href="assets/drivelink-logo.png">
   <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Nur für die Rechtstext-Seiten: Listen und Hervorhebungen lesbar machen. */
+    main.page ul { margin: 0 0 1.1rem 1.3rem; }
+    main.page li { margin-bottom: .45rem; }
+    main.page h2 { margin-top: 2.4rem; }
+    main.page h3 { margin-top: 1.6rem; font-size: 1.05rem; }
+    main.page .legal-basis {
+      display: inline-block;
+      margin-top: .35rem;
+      font-size: .9rem;
+      opacity: .85;
+    }
+    main.page .callout {
+      border-left: 3px solid var(--teal);
+      padding: .1rem 0 .1rem 1rem;
+      margin: 1.2rem 0;
+    }
+  </style>
 </head>
 <body>
 
@@ -25,47 +43,269 @@
 
   <main class="page wrap">
     <h1>Datenschutzerklärung</h1>
-    <p class="updated">Stand: Juli 2026 · Entwurf – rechtliche Prüfung noch ausstehend</p>
+    <p class="updated">Stand: August 2026</p>
 
-    <p>Diese Datenschutzerklärung informiert dich darüber, welche personenbezogenen Daten wir bei der Nutzung der App DriveLink verarbeiten und zu welchem Zweck.</p>
+    <p>DriveLink ist eine App für Autobegeisterte. Sie zeigt Orte, Treffen und andere Nutzer auf
+    einer Karte. Das geht nicht ohne Standortdaten – deshalb erklären wir hier möglichst genau,
+    was wir womit machen, was freiwillig ist und wie du alles wieder abschalten kannst.</p>
 
-    <h2>1. Verantwortlicher</h2>
-    <p>Verantwortlich für die Datenverarbeitung ist der im <a href="impressum.html">Impressum</a> genannte Anbieter.</p>
-
-    <h2>2. Welche Daten wir verarbeiten</h2>
-    <p><strong>Kontodaten:</strong> Bei der Registrierung erheben wir deine E-Mail-Adresse und ein von dir gewähltes Passwort (verschlüsselt gespeichert) sowie optionale Profilangaben (z. B. Anzeigename, Profilbild).</p>
-    <p><strong>Standortdaten:</strong> Für die Live-Karte, den Radar sowie für Auto-Encounters benötigt die App Zugriff auf deinen Standort. Diesen kannst du in den iOS-Einstellungen jederzeit widerrufen; einzelne Funktionen stehen dann nicht mehr zur Verfügung.</p>
-    <p><strong>Fotos:</strong> Wenn du Fotos für deine Garage, Spots oder dein Profil hochlädst, benötigt die App Zugriff auf deine Kamera bzw. Fotomediathek.</p>
-    <p><strong>Nutzungsinhalte:</strong> Von dir erstellte Inhalte wie Routen, Events, Convoys, Chat-Nachrichten, Ghost Zones und Marktplatz-Angebote werden gespeichert, um die entsprechenden Funktionen bereitzustellen.</p>
-    <p><strong>Push-Benachrichtigungen:</strong> Falls du Benachrichtigungen erlaubst, verwenden wir ein Geräte-Token, um dir z. B. Chat- oder Event-Hinweise zuzustellen.</p>
-
-    <h2>3. Zweck der Verarbeitung</h2>
-    <ul>
-      <li>Bereitstellung und Betrieb der App-Funktionen (Karte, Routen, Convoys, Events, Garage, Marktplatz, Freunde)</li>
-      <li>Kommunikation zwischen Nutzern (Chat)</li>
-      <li>Kontoverwaltung und Authentifizierung</li>
-      <li>Support und Fehlerbehebung</li>
-    </ul>
-
-    <h2>4. Auftragsverarbeiter &amp; Hosting</h2>
-    <p>Wir nutzen <strong>Supabase</strong> (Supabase Inc.) für Authentifizierung, Datenbank und Datei-Speicherung. Mit Supabase besteht ein Auftragsverarbeitungsvertrag. Es kann dabei zu einer Datenübermittlung in Länder außerhalb der EU/des EWR kommen; Supabase stützt sich hierbei auf die EU-Standardvertragsklauseln.</p>
-
-    <h2>5. Weitergabe an Dritte</h2>
-    <p>Eine Weitergabe deiner Daten an Dritte erfolgt nur, soweit dies zur Erbringung der App-Funktionen erforderlich ist (siehe Ziffer 4), du eingewilligt hast, oder wir gesetzlich dazu verpflichtet sind. Inhalte, die du bewusst öffentlich teilst (z. B. Spots, Events, Profilangaben), sind für andere Nutzer der App sichtbar.</p>
-
-    <h2>6. Speicherdauer</h2>
-    <p>Wir speichern deine Daten, solange dein Konto besteht. Nach Löschung deines Kontos werden deine personenbezogenen Daten gelöscht, soweit keine gesetzlichen Aufbewahrungspflichten entgegenstehen.</p>
-
-    <h2>7. Deine Rechte</h2>
-    <p>Du hast nach der DSGVO das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch gegen die Verarbeitung deiner Daten. Wende dich hierfür an <a href="mailto:support.drivelink.app@gmail.com">support.drivelink.app@gmail.com</a>. Außerdem steht dir ein Beschwerderecht bei einer Datenschutzaufsichtsbehörde zu.</p>
-
-    <h2>8. Kontakt</h2>
-    <div class="contact-box">
-      <p style="margin:0;">Für Fragen zum Datenschutz erreichst du uns unter:</p>
-      <p style="margin-top:12px;"><a href="mailto:support.drivelink.app@gmail.com">support.drivelink.app@gmail.com</a></p>
+    <div class="callout">
+      <p><strong>Das Wichtigste vorab:</strong> Wir verkaufen keine Daten. Wir setzen keine
+      Werbenetzwerke und keine Analyse-Dienste von Drittanbietern ein. Wir verfolgen dich nicht
+      über andere Apps oder Websites hinweg. Es gibt in DriveLink keine Werbung.</p>
     </div>
 
-    <p style="margin-top:32px; font-size:13px; color:var(--text-muted);">Hinweis: Dies ist ein Entwurf auf Basis der aktuell in der App verwendeten Funktionen und Berechtigungen. Vor Veröffentlichung im App Store sollte diese Erklärung von einem Anwalt bzw. einer auf Datenschutzrecht spezialisierten Stelle geprüft werden.</p>
+    <h2>1. Verantwortlicher</h2>
+    <p>Verantwortlich für die Verarbeitung personenbezogener Daten im Sinne der
+    Datenschutz-Grundverordnung (DSGVO) ist:</p>
+    <p>
+      Jakob Lischke<br>
+      Kohlenstraße 46<br>
+      01189 Dresden<br>
+      Deutschland
+    </p>
+    <p>E-Mail: <a href="mailto:support.drivelink.app@gmail.com">support.drivelink.app@gmail.com</a></p>
+    <p>Ein Datenschutzbeauftragter ist nicht bestellt, da die gesetzlichen Voraussetzungen
+    hierfür nicht vorliegen.</p>
+
+    <h2>2. Konto und Profil</h2>
+    <p>Zur Nutzung von DriveLink ist ein Konto erforderlich. Dabei verarbeiten wir:</p>
+    <ul>
+      <li><strong>E-Mail-Adresse</strong> – für Anmeldung, Passwort-Zurücksetzung und wichtige
+      Mitteilungen zum Konto</li>
+      <li><strong>Passwort</strong> – ausschließlich als kryptografischer Hashwert; wir können
+      dein Passwort nicht einsehen</li>
+      <li><strong>Benutzername und Anzeigename</strong> – ein Klarname ist nicht erforderlich,
+      ein frei gewählter Name genügt</li>
+      <li><strong>Freiwillige Profilangaben</strong> – Profilbild, Beschreibung, Fahrzeugdaten
+      deiner Garage</li>
+    </ul>
+    <p class="legal-basis"><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. b DSGVO
+    (Erfüllung des Nutzungsvertrags).</p>
+
+    <h2>3. Standortdaten</h2>
+    <p>Standortdaten sind die sensibelste Datenkategorie in DriveLink. Wir verarbeiten sie in
+    vier voneinander unabhängigen Zusammenhängen.</p>
+
+    <h3>a) Live-Karte</h3>
+    <p>Solange die App geöffnet ist, kann deine Position an andere Nutzer übermittelt werden,
+    damit ihr euch gegenseitig auf der Karte seht. <strong>Du bestimmst, wer dich sieht:</strong>
+    alle Nutzer, nur deine Freunde oder niemand. Die Einstellung findest du in der App unter
+    Einstellungen → Datenschutz → Sichtbarkeit und kannst sie jederzeit ändern. Wählst du
+    „niemand", wird deine Position nicht mehr an andere übertragen.</p>
+    <p class="legal-basis"><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. b DSGVO
+    (Kernfunktion der App).</p>
+
+    <h3>b) Routen aufzeichnen</h3>
+    <p>Wenn du eine Fahrt aufzeichnest, speichern wir den gefahrenen Streckenverlauf mit
+    Zeitstempeln, um dir hinterher deine Route anzeigen zu können. Diese Aufzeichnung läuft auf
+    deinen Wunsch auch weiter, wenn du das Display sperrst oder die App in den Hintergrund
+    legst. Dafür fragt die App eine gesonderte Berechtigung ab („Immer erlauben"). Erteilst du
+    sie nicht, endet die Aufzeichnung, sobald die App in den Hintergrund wechselt – alle übrigen
+    Funktionen bleiben nutzbar.</p>
+    <p class="legal-basis"><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. b DSGVO.</p>
+
+    <h3>c) Straßen-Heatmap</h3>
+    <p>DriveLink kann auf der Karte anzeigen, welche Straßen von der Community häufig befahren
+    werden. Dazu trägt die App während der Fahrt automatisch bei – auch dann, wenn du keine
+    Aufzeichnung gestartet hast.</p>
+    <p><strong>Wie das technisch abläuft:</strong> Deine Positionen werden auf vorhandene
+    Straßenabschnitte abgebildet. Gespeichert wird ausschließlich ein Zähler pro Abschnitt sowie
+    die Anzahl unterschiedlicher Personen, die ihn befahren haben. <strong>Es werden keine
+    einzelnen Fahrten und keine Bewegungsprofile gespeichert.</strong> Ein Straßenabschnitt wird
+    erst dann auf der Karte sichtbar, wenn ihn mindestens drei verschiedene Personen befahren
+    haben; der Weg einer einzelnen Person lässt sich daraus nicht rekonstruieren.</p>
+    <p>Diese Funktion ist freiwillig. Beim ersten Einschalten der Heatmap erklärt dir die App den
+    Beitrag und bietet dir an, ihn direkt abzulehnen. Du kannst ihn jederzeit unter
+    Einstellungen → Datenschutz vollständig abschalten.</p>
+    <p class="legal-basis"><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. a DSGVO
+    (Einwilligung). Du kannst deine Einwilligung jederzeit mit Wirkung für die Zukunft
+    widerrufen, indem du den Beitrag in den Einstellungen deaktivierst.</p>
+
+    <h3>d) Rundenzeiten auf Rennstrecken</h3>
+    <p>Befindest du dich auf einer der in der App hinterlegten Rennstrecken, kann DriveLink deine
+    Rundenzeiten messen. Dabei werden Positionsdaten innerhalb des Streckenverlaufs verarbeitet.
+    Die Messung startet ausschließlich auf abgesperrten Rennstrecken und nur dann, wenn sich dein
+    Gerät nachweislich auf dem hinterlegten Streckenverlauf befindet. Im öffentlichen
+    Straßenverkehr findet keine Zeitmessung statt.</p>
+    <p class="legal-basis"><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. b DSGVO.</p>
+
+    <h3>Ghost Zones – Bereiche, in denen nichts erfasst wird</h3>
+    <p>Du kannst in der App Bereiche festlegen, etwa rund um deine Wohnung oder deinen
+    Arbeitsplatz. Innerhalb dieser Ghost Zones bist du für andere Nutzer unsichtbar, und es
+    werden dort auch keine Positionsdaten für die Straßen-Heatmap erfasst.</p>
+
+    <h3>Berechtigung widerrufen</h3>
+    <p>Du kannst den Standortzugriff jederzeit in den iOS-Einstellungen deines Geräts entziehen.
+    Die standortbezogenen Funktionen stehen dann nicht mehr zur Verfügung; dein Konto und deine
+    übrigen Daten bleiben unberührt.</p>
+
+    <h2>4. Von dir erstellte Inhalte</h2>
+    <p>DriveLink lebt von Inhalten, die Nutzer beitragen. Dazu gehören Orte („Spots"),
+    Veranstaltungen, Routen, Fotos, Profilbeiträge, Kommentare, Fahrzeugdaten der Garage sowie
+    Hinweise auf Gefahrenstellen. Diese Inhalte speichern wir, um sie in der App anzuzeigen.</p>
+    <div class="callout">
+      <p><strong>Bitte beachte:</strong> Inhalte, die du erstellst, sind für andere Nutzer
+      sichtbar – zusammen mit deinem Benutzernamen und dem Ort, auf den sie sich beziehen.
+      Überlege daher, welche Orte du einträgst und welche Fotos du hochlädst.</p>
+    </div>
+    <p><strong>Fotos:</strong> Für das Hochladen benötigt die App Zugriff auf Kamera oder
+    Fotomediathek. Der Zugriff erfolgt nur, wenn du selbst ein Foto auswählst oder aufnimmst.</p>
+    <p class="legal-basis"><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. b DSGVO.</p>
+
+    <h2>5. Nachrichten und Kolonnen</h2>
+    <p>Du kannst anderen Nutzern Direktnachrichten schreiben und dich in Kolonnen („Convoys")
+    zusammenschließen. Nachrichten werden auf unseren Servern gespeichert, damit sie zugestellt
+    werden können.</p>
+    <div class="callout">
+      <p><strong>Keine Ende-zu-Ende-Verschlüsselung:</strong> Nachrichten sind auf dem
+      Übertragungsweg verschlüsselt, liegen auf dem Server aber nicht Ende-zu-Ende-verschlüsselt
+      vor. Sende daher keine vertraulichen Informationen über den Chat.</p>
+    </div>
+    <p>In einer Kolonne ist dein Standort für die übrigen Teilnehmer sichtbar, solange die
+    Kolonne läuft. Ghost Zones gelten auch hier: Innerhalb einer eigenen Ghost Zone bist du auch
+    für Kolonnen-Teilnehmer unsichtbar. Kolonnen enden automatisch spätestens zwölf Stunden nach
+    dem Start.</p>
+    <p class="legal-basis"><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. b DSGVO.</p>
+
+    <h2>6. Push-Benachrichtigungen</h2>
+    <p>Wenn du Benachrichtigungen erlaubst, erzeugt dein Gerät eine technische Kennung
+    (Push-Token), die wir speichern, um dir Hinweise zuzustellen – etwa zu neuen Nachrichten,
+    Freundschaftsanfragen oder anstehenden Treffen. Du kannst Benachrichtigungen jederzeit in den
+    iOS-Einstellungen oder in der App abschalten.</p>
+    <p class="legal-basis"><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. a DSGVO
+    (Einwilligung), jederzeit widerrufbar.</p>
+
+    <h2>7. Meldungen, Blockieren und Moderation</h2>
+    <p>Du kannst Inhalte und Nutzer melden sowie andere Nutzer blockieren. Meldungen speichern
+    wir zusammen mit deiner Nutzerkennung, dem gemeldeten Inhalt und dem angegebenen Grund, um
+    sie prüfen zu können. Blockierungen speichern wir, um die betroffenen Inhalte für dich
+    auszublenden. Meldungen bearbeiten wir in der Regel innerhalb von 24 Stunden.</p>
+    <p class="legal-basis"><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. c DSGVO
+    (rechtliche Verpflichtungen, u. a. aus dem Digital Services Act) sowie Art. 6 Abs. 1 lit. f
+    DSGVO (berechtigtes Interesse an einer missbrauchsfreien Plattform).</p>
+
+    <h2>8. Technische Nutzungsdaten</h2>
+    <p>Wir speichern den Zeitpunkt deines letzten App-Starts, um zu ermitteln, wie viele Personen
+    DriveLink aktiv nutzen. Es entsteht dabei kein Nutzungsprofil: Wir werten weder aus, welche
+    Funktionen du benutzt, noch wie lange du in der App bist. Ein Analyse-Dienst eines
+    Drittanbieters kommt nicht zum Einsatz.</p>
+    <p>Beim Zugriff auf unsere Server fallen zudem technisch notwendige Verbindungsdaten an
+    (IP-Adresse, Zeitpunkt, aufgerufene Funktion). Diese dienen dem Betrieb und der Abwehr von
+    Missbrauch und werden kurzfristig gelöscht.</p>
+    <p class="legal-basis"><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. f DSGVO
+    (berechtigtes Interesse am sicheren Betrieb und an einer Reichweitenmessung ohne
+    Personenbezug im Einzelfall).</p>
+
+    <h2>9. Empfänger und eingesetzte Dienste</h2>
+    <p>Wir geben Daten nur weiter, soweit das für den Betrieb der App erforderlich ist. Folgende
+    Dienstleister sind eingebunden:</p>
+
+    <h3>Supabase (Hosting, Datenbank, Anmeldung, Dateispeicher)</h3>
+    <p>Supabase Inc., 970 Toa Payoh North, Singapur. Sämtliche Konto- und Inhaltsdaten werden
+    dort gespeichert. Mit Supabase besteht ein Vertrag zur Auftragsverarbeitung nach Art. 28
+    DSGVO. Der von uns genutzte Datenbank-Standort liegt in der Europäischen Union. Soweit es
+    dennoch zu einer Übermittlung in Drittländer kommt, stützt sich Supabase auf die
+    EU-Standardvertragsklauseln.</p>
+
+    <h3>Apple Push Notification Service und Expo (Benachrichtigungen)</h3>
+    <p>Apple Inc., One Apple Park Way, Cupertino, USA, sowie 650 Industries, Inc. („Expo"), USA.
+    Übermittelt werden der Push-Token deines Geräts und der Inhalt der jeweiligen
+    Benachrichtigung. Nur relevant, wenn du Benachrichtigungen erlaubt hast.</p>
+
+    <h3>Kartendarstellung, Routenberechnung und Adresssuche</h3>
+    <p>Die Karte selbst stammt von <strong>Apple Maps</strong> (Apple Inc.). Für die Berechnung
+    von Routen nutzen wir <strong>OSRM</strong> (router.project-osrm.org), für die Umwandlung von
+    Ortsnamen in Koordinaten und umgekehrt <strong>Nominatim</strong>
+    (nominatim.openstreetmap.org); beide Dienste werden von der OpenStreetMap Foundation
+    bereitgestellt.</p>
+    <p>An diese Dienste werden die jeweils erforderlichen Koordinaten beziehungsweise der von dir
+    eingegebene Suchbegriff übermittelt. <strong>Eine Nutzerkennung oder ein dauerhaftes Merkmal
+    übertragen wir dabei nicht</strong>; die Anfragen lassen sich deinem Konto nicht zuordnen.
+    Die Übermittlung erfolgt jeweils erst dann, wenn du eine Route berechnen lässt oder nach
+    einem Ort suchst.</p>
+    <p class="legal-basis"><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. b DSGVO.</p>
+
+    <p>Eine darüber hinausgehende Weitergabe erfolgt nur, wenn du eingewilligt hast oder wir
+    gesetzlich dazu verpflichtet sind, etwa gegenüber Strafverfolgungsbehörden.</p>
+
+    <h2>10. Speicherdauer</h2>
+    <ul>
+      <li><strong>Konto- und Profildaten:</strong> solange dein Konto besteht</li>
+      <li><strong>Von dir erstellte Inhalte:</strong> bis du sie löschst oder dein Konto löschst</li>
+      <li><strong>Nachrichten:</strong> bis zur Löschung durch einen der Beteiligten, längstens
+      bis zur Kontolöschung</li>
+      <li><strong>Meldungen:</strong> bis zu sechs Monate nach Abschluss der Prüfung, zur
+      Nachvollziehbarkeit bei wiederholten Verstößen</li>
+      <li><strong>Technische Verbindungsdaten:</strong> wenige Tage</li>
+    </ul>
+    <p><strong>Bei Löschung deines Kontos</strong> werden deine personenbezogenen Daten gelöscht.
+    Inhalte, die andere Nutzer betreffen oder für die Karte weiterhin von Bedeutung sind, werden
+    anonymisiert, sodass sie dir nicht mehr zugeordnet werden können. Die Zähler der
+    Straßen-Heatmap bleiben bestehen, da sie bereits im Moment der Erfassung keiner Person
+    zugeordnet sind. Gesetzliche Aufbewahrungspflichten bleiben unberührt.</p>
+    <p>Dein Konto kannst du jederzeit selbst in der App löschen: Einstellungen → Konto löschen.</p>
+
+    <h2>11. Deine Rechte</h2>
+    <p>Nach der DSGVO stehen dir folgende Rechte zu:</p>
+    <ul>
+      <li><strong>Auskunft</strong> (Art. 15) – welche Daten wir über dich verarbeiten</li>
+      <li><strong>Berichtigung</strong> (Art. 16) – Korrektur unrichtiger Daten</li>
+      <li><strong>Löschung</strong> (Art. 17) – „Recht auf Vergessenwerden"</li>
+      <li><strong>Einschränkung der Verarbeitung</strong> (Art. 18)</li>
+      <li><strong>Datenübertragbarkeit</strong> (Art. 20) – Herausgabe deiner Daten in einem
+      gängigen Format</li>
+      <li><strong>Widerruf erteilter Einwilligungen</strong> (Art. 7 Abs. 3) – mit Wirkung für
+      die Zukunft, ohne Einfluss auf die Rechtmäßigkeit der bisherigen Verarbeitung</li>
+    </ul>
+
+    <div class="callout">
+      <p><strong>Widerspruchsrecht nach Art. 21 DSGVO:</strong> Du hast das Recht, aus Gründen,
+      die sich aus deiner besonderen Situation ergeben, jederzeit Widerspruch gegen Verarbeitungen
+      einzulegen, die wir auf ein berechtigtes Interesse stützen (Art. 6 Abs. 1 lit. f DSGVO).
+      Das betrifft in dieser Erklärung die Abschnitte 7 und 8. Wir verarbeiten die betreffenden
+      Daten dann nicht mehr, es sei denn, wir können zwingende schutzwürdige Gründe nachweisen.</p>
+    </div>
+
+    <p>Zur Ausübung deiner Rechte genügt eine formlose E-Mail an
+    <a href="mailto:support.drivelink.app@gmail.com">support.drivelink.app@gmail.com</a>.</p>
+
+    <h3>Beschwerderecht</h3>
+    <p>Du hast das Recht, dich bei einer Datenschutz-Aufsichtsbehörde zu beschweren. Für uns
+    zuständig ist:</p>
+    <p>
+      Die Sächsische Datenschutzbeauftragte<br>
+      Devrientstraße 5<br>
+      01067 Dresden<br>
+      <a href="https://www.saechsdsb.de">www.saechsdsb.de</a>
+    </p>
+    <p>Du kannst dich auch an die Aufsichtsbehörde deines gewöhnlichen Aufenthaltsorts wenden.</p>
+
+    <h2>12. Keine automatisierte Entscheidungsfindung</h2>
+    <p>Eine automatisierte Entscheidungsfindung einschließlich Profiling im Sinne des Art. 22
+    DSGVO findet nicht statt. Die einzige automatische Regel in der App betrifft Inhalte, nicht
+    Personen: Ein Ort wird ausgeblendet, wenn mehrere Nutzer bestätigen, dass es ihn nicht mehr
+    gibt.</p>
+
+    <h2>13. Datensicherheit</h2>
+    <p>Die Übertragung zwischen App und Server erfolgt ausschließlich verschlüsselt (TLS).
+    Passwörter werden als Hashwerte gespeichert. Der Zugriff auf Daten ist über Regeln auf
+    Datenbankebene beschränkt, sodass jedes Konto nur die Daten abrufen kann, für die es
+    berechtigt ist.</p>
+
+    <h2>14. Mindestalter</h2>
+    <p>DriveLink richtet sich an Personen ab 16 Jahren. Jüngere Personen dürfen die App nur mit
+    Einwilligung der Erziehungsberechtigten nutzen. Wir erheben das Alter nicht aktiv; erhalten
+    wir Kenntnis davon, dass ein Konto entgegen dieser Regelung geführt wird, löschen wir es.</p>
+
+    <h2>15. Änderungen dieser Erklärung</h2>
+    <p>Wir passen diese Datenschutzerklärung an, wenn sich Funktionen der App oder die
+    Rechtslage ändern. Maßgeblich ist die jeweils hier veröffentlichte Fassung. Bei wesentlichen
+    Änderungen weisen wir in der App darauf hin.</p>
+
+    <h2>16. Kontakt</h2>
+    <p>Bei Fragen zum Datenschutz erreichst du uns unter
+    <a href="mailto:support.drivelink.app@gmail.com">support.drivelink.app@gmail.com</a>.</p>
   </main>
 
   <footer class="site">
