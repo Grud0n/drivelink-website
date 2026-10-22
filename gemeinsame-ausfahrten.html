@@ -51,7 +51,23 @@
           <a class="btn btn-secondary" href="autotreffen-finden.html">Autotreffen finden</a>
         </div>
       </div>
-      <div class="phone reveal"><img src="assets/screens/gruppe.jpg" alt="DriveLink Gruppen-Chat mit Abstimmung: Welche Route fahren wir Samstag?" width="506" height="1100"></div>
+      <div class="phone reveal"><img src="assets/screens/karte-3d.jpg" alt="DriveLink Live-Karte in 3D mit Sichtbarkeit „Nur Freunde“" width="506" height="1100"></div>
+    </div>
+
+    <h2>Route planen, Stopp für Stopp</h2>
+    <p>Im Routenplaner setzt du Start, Zwischenstopps und Ziel auf der Karte, als Strecke oder als Rundtour. DriveLink berechnet Kilometer und Fahrzeit für jede Etappe. Scroll durch eine echte Tour aus der App:</p>
+    <div class="route-tour">
+      <ol class="stops" id="stops">
+        <li data-km="0" data-x="14.2" data-y="20.5"><span class="tg">START</span><strong>Blaues Wunder, Dresden</strong><p>17,8 km · 37 min bis Pirna</p></li>
+        <li data-km="17.8" data-x="43.9" data-y="29.9"><span class="tg">STOPP 1</span><strong>Pirna</strong><p>19,9 km · 27 min bis Bad Schandau</p></li>
+        <li data-km="37.7" data-x="75.1" data-y="34.5"><span class="tg">STOPP 2</span><strong>Bad Schandau</strong><p>10,9 km · 16 min bis Hohnstein</p></li>
+        <li data-km="48.6" data-x="68.6" data-y="28"><span class="tg">STOPP 3</span><strong>Hohnstein</strong><p>33,5 km · 52 min bis zum Ziel</p></li>
+        <li data-km="82.1"><span class="tg">ZIEL</span><strong>Angekommen</strong><p>82,1 km · 2 h 13 min · 4 Stopps</p></li>
+      </ol>
+      <div class="stick">
+        <div class="phone"><img src="assets/screens/planer.jpg" alt="DriveLink Routenplaner: Tour von Dresden durch die Sächsische Schweiz, 82,1 km, 2 h 13 min, 4 Stopps" width="506" height="1100" loading="lazy"><div class="ping" id="ping" aria-hidden="true" style="left:14.2%;top:20.5%"></div></div>
+        <div class="odo" aria-hidden="true"><div><span id="km">0,0</span><small>km</small></div><div><span id="stp">0</span>/4<small>Stopps</small></div></div>
+      </div>
     </div>
 
     <h2>Eine Ausfahrt in drei Etappen</h2>
@@ -86,6 +102,20 @@
     </ol>
 
     <h2>Was die Kolonne unterwegs kann</h2>
+    <div class="stage-box">
+      <div class="banner" id="banner" aria-hidden="true"><b>●</b> Lisa ist <span id="gap">1,2</span> km zurückgefallen</div>
+      <svg viewBox="0 0 900 380" role="img" aria-label="Animation: vier Autos fahren als Kolonne eine Route, der Navigator vorn, eines fällt zurück und die App zeigt einen Hinweis">
+        <g stroke="#1c2028" stroke-width="1"><path d="M0 60H900M0 140H900M0 220H900M0 300H900M120 0V380M300 0V380M480 0V380M660 0V380M840 0V380"/></g>
+        <path d="M40 320 C 180 120, 300 160, 400 230 S 600 330, 680 180 S 820 40, 870 90" fill="none" stroke="#1f2a2c" stroke-width="22" stroke-linecap="round"/>
+        <path id="road" class="glow" d="M40 320 C 180 120, 300 160, 400 230 S 600 330, 680 180 S 820 40, 870 90" fill="none" stroke="#66FCF1" stroke-width="4" stroke-linecap="round" style="filter: drop-shadow(0 0 6px rgba(102,252,241,.7))"/>
+        <g id="cars" font-family="Plex Mono, monospace" font-size="13" font-weight="600" text-anchor="middle">
+          <g transform="translate(560 300)"><circle r="20" fill="#E63946" fill-opacity=".18"/><circle r="9" fill="#E63946" stroke="#0B0C10" stroke-width="3"/><text y="-24" fill="#ECEAE4">NAV</text></g>
+          <g transform="translate(510 290)"><circle r="20" fill="#ECEAE4" fill-opacity=".18"/><circle r="9" fill="#ECEAE4" stroke="#0B0C10" stroke-width="3"/><text y="-24" fill="#ECEAE4">DU</text></g>
+          <g transform="translate(460 270)"><circle r="20" fill="#ECEAE4" fill-opacity=".18"/><circle r="9" fill="#ECEAE4" stroke="#0B0C10" stroke-width="3"/><text y="-24" fill="#ECEAE4">TOM</text></g>
+          <g transform="translate(300 170)"><circle r="20" fill="#ECEAE4" fill-opacity=".18"/><circle r="9" fill="#ECEAE4" stroke="#0B0C10" stroke-width="3"/><text y="-24" fill="#ECEAE4">LISA</text></g>
+        </g>
+      </svg>
+    </div>
     <div class="topic-grid">
       <div class="topic-card">
         <h3>Alle auf einer Karte</h3>
@@ -101,12 +131,35 @@
       </div>
       <div class="topic-card">
         <h3>Endet von selbst</h3>
+        <div class="ring" aria-hidden="true">
+          <svg width="120" height="120" viewBox="0 0 200 200"><circle cx="100" cy="100" r="86" fill="none" stroke="#2A2F38" stroke-width="12"/><circle id="arc" cx="100" cy="100" r="86" fill="none" stroke="#66FCF1" stroke-width="12" stroke-linecap="round" pathLength="1" stroke-dasharray="1" stroke-dashoffset="0"/></svg>
+          <div class="t"><span id="clock">12:00</span><small id="clockSub" data-on="läuft" data-off="beendet">läuft</small></div>
+        </div>
         <p>Eine Kolonne endet automatisch spätestens nach 12 Stunden. Niemand bleibt aus Versehen tagelang sichtbar.</p>
       </div>
     </div>
 
     <h2>DriveLink oder WhatsApp-Gruppe?</h2>
-    <p>Die meisten Ausfahrten werden heute in WhatsApp-Gruppen geplant. Das klappt, solange alle den Weg kennen. Der Unterschied:</p>
+    <p>Die meisten Ausfahrten werden heute in WhatsApp-Gruppen geplant. Das klappt, solange alle den Weg kennen. Zieh den roten Knopf:</p>
+    <div class="ba" id="ba">
+      <div class="pane left">
+        <span class="lbl">WhatsApp-Gruppe</span>
+        <div class="chat" aria-hidden="true">
+          <div class="bub"><small>Max</small>Wo seid ihr???</div>
+          <div class="bub"><small>Lisa</small>Welche Abfahrt war das jetzt</div>
+          <div class="bub me">Schick nochmal den Link</div>
+          <div class="bub"><small>Tom</small>Steh an der Tanke, wartet mal</div>
+          <div class="bub"><small>Max</small>Welche Tanke 😅</div>
+          <div class="bub me">Hab euch verloren</div>
+        </div>
+      </div>
+      <div class="pane right" id="baRight">
+        <span class="lbl">DriveLink</span>
+        <div class="phone"><img src="assets/screens/gruppe.jpg" alt="DriveLink Gruppen-Chat mit Abstimmung: Welche Route fahren wir Samstag?" width="506" height="1100" loading="lazy"></div>
+      </div>
+      <div class="ba-handle" id="baHandle" role="slider" tabindex="0" aria-label="Vergleich WhatsApp-Gruppe und DriveLink verschieben" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"><span aria-hidden="true">⇆</span></div>
+    </div>
+    <p>Der Unterschied im Überblick:</p>
     <div class="compare-scroll">
       <table class="compare">
         <thead>
@@ -125,6 +178,17 @@
 
     <h2>Deine Privatsphäre</h2>
     <p>Du entscheidest selbst, wer dich auf der Karte sieht: alle, nur Freunde oder niemand. Bei „Alle“ und „Nur Freunde“ sieht dich auch deine Kolonne, solange ihr gemeinsam unterwegs seid. Mit einer <strong>Ghost Zone</strong> um dein Zuhause bleibst du dort für alle unsichtbar, auch für deine Kolonne. So verrät keine Ausfahrt, wo du wohnst.</p>
+    <div class="stage-box">
+      <svg viewBox="0 0 900 340" role="img" aria-label="Animation: Ein Auto fährt in die Ghost Zone um ein Haus, verschwindet dort von der Karte und taucht danach wieder auf">
+        <g stroke="#1c2028" stroke-width="1"><path d="M0 70H900M0 170H900M0 270H900M150 0V340M450 0V340M750 0V340"/></g>
+        <path id="gpath" d="M60 290 C 220 290, 300 170, 450 170 S 700 60, 860 70" fill="none" stroke="#2A2F38" stroke-width="3" stroke-dasharray="6 8"/>
+        <circle cx="450" cy="170" r="110" fill="rgba(69,162,158,.07)" stroke="#45A29E" stroke-width="2" stroke-dasharray="8 8"/>
+        <g transform="translate(450 170)" fill="none" stroke="#ECEAE4" stroke-width="3" stroke-linejoin="round"><path d="M-18 4 L0 -14 L18 4 M-12 0 V16 H12 V0"/></g>
+        <text x="450" y="315" text-anchor="middle" fill="#45A29E" font-family="Plex Mono, monospace" font-size="15" font-weight="600" letter-spacing="1.5">GHOST ZONE</text>
+        <g id="gcar" style="transition: opacity .35s"><circle r="11" fill="#ECEAE4"/><circle r="20" fill="none" stroke="#ECEAE4" stroke-opacity=".35"/></g>
+        <text id="gstate" x="40" y="40" fill="#ECEAE4" font-family="Plex Mono, monospace" font-size="15" data-on="sichtbar für Freunde" data-off="unsichtbar · Ghost Zone">sichtbar für Freunde</text>
+      </svg>
+    </div>
 
     <h2>Weiterlesen</h2>
     <div class="related">

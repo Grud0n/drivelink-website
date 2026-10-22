@@ -51,7 +51,23 @@
           <a class="btn btn-secondary" href="car-meets.html">Find car meets</a>
         </div>
       </div>
-      <div class="phone reveal"><img src="../assets/screens/gruppe.jpg" alt="DriveLink group chat with a vote: which route are we driving on Saturday?" width="506" height="1100"></div>
+      <div class="phone reveal"><img src="../assets/screens/karte-3d.jpg" alt="DriveLink 3D live map with visibility set to friends only" width="506" height="1100"></div>
+    </div>
+
+    <h2>Plan the route, stop by stop</h2>
+    <p>In the route planner you set the start, stops and destination on the map, as a one-way route or a loop. DriveLink works out distance and drive time for every leg. Scroll through a real tour from the app:</p>
+    <div class="route-tour">
+      <ol class="stops" id="stops">
+        <li data-km="0" data-x="14.2" data-y="20.5"><span class="tg">START</span><strong>Blaues Wunder bridge, Dresden</strong><p>17.8 km · 37 min to Pirna</p></li>
+        <li data-km="17.8" data-x="43.9" data-y="29.9"><span class="tg">STOP 1</span><strong>Pirna</strong><p>19.9 km · 27 min to Bad Schandau</p></li>
+        <li data-km="37.7" data-x="75.1" data-y="34.5"><span class="tg">STOP 2</span><strong>Bad Schandau</strong><p>10.9 km · 16 min to Hohnstein</p></li>
+        <li data-km="48.6" data-x="68.6" data-y="28"><span class="tg">STOP 3</span><strong>Hohnstein</strong><p>33.5 km · 52 min to the finish</p></li>
+        <li data-km="82.1"><span class="tg">FINISH</span><strong>Arrived</strong><p>82.1 km · 2 h 13 min · 4 stops</p></li>
+      </ol>
+      <div class="stick">
+        <div class="phone"><img src="../assets/screens/planer.jpg" alt="DriveLink route planner: tour from Dresden through Saxon Switzerland, 82.1 km, 2 h 13 min, 4 stops" width="506" height="1100" loading="lazy"><div class="ping" id="ping" aria-hidden="true" style="left:14.2%;top:20.5%"></div></div>
+        <div class="odo" aria-hidden="true"><div><span id="km">0.0</span><small>km</small></div><div><span id="stp">0</span>/4<small>stops</small></div></div>
+      </div>
     </div>
 
     <h2>A drive in three stages</h2>
@@ -86,6 +102,20 @@
     </ol>
 
     <h2>What the convoy does on the road</h2>
+    <div class="stage-box">
+      <div class="banner" id="banner" aria-hidden="true"><b>●</b> Lisa has fallen <span id="gap">1.2</span> km behind</div>
+      <svg viewBox="0 0 900 380" role="img" aria-label="Animation: four cars drive a route as a convoy, the navigator up front; one falls behind and the app shows a notice">
+        <g stroke="#1c2028" stroke-width="1"><path d="M0 60H900M0 140H900M0 220H900M0 300H900M120 0V380M300 0V380M480 0V380M660 0V380M840 0V380"/></g>
+        <path d="M40 320 C 180 120, 300 160, 400 230 S 600 330, 680 180 S 820 40, 870 90" fill="none" stroke="#1f2a2c" stroke-width="22" stroke-linecap="round"/>
+        <path id="road" class="glow" d="M40 320 C 180 120, 300 160, 400 230 S 600 330, 680 180 S 820 40, 870 90" fill="none" stroke="#66FCF1" stroke-width="4" stroke-linecap="round" style="filter: drop-shadow(0 0 6px rgba(102,252,241,.7))"/>
+        <g id="cars" font-family="Plex Mono, monospace" font-size="13" font-weight="600" text-anchor="middle">
+          <g transform="translate(560 300)"><circle r="20" fill="#E63946" fill-opacity=".18"/><circle r="9" fill="#E63946" stroke="#0B0C10" stroke-width="3"/><text y="-24" fill="#ECEAE4">NAV</text></g>
+          <g transform="translate(510 290)"><circle r="20" fill="#ECEAE4" fill-opacity=".18"/><circle r="9" fill="#ECEAE4" stroke="#0B0C10" stroke-width="3"/><text y="-24" fill="#ECEAE4">YOU</text></g>
+          <g transform="translate(460 270)"><circle r="20" fill="#ECEAE4" fill-opacity=".18"/><circle r="9" fill="#ECEAE4" stroke="#0B0C10" stroke-width="3"/><text y="-24" fill="#ECEAE4">TOM</text></g>
+          <g transform="translate(300 170)"><circle r="20" fill="#ECEAE4" fill-opacity=".18"/><circle r="9" fill="#ECEAE4" stroke="#0B0C10" stroke-width="3"/><text y="-24" fill="#ECEAE4">LISA</text></g>
+        </g>
+      </svg>
+    </div>
     <div class="topic-grid">
       <div class="topic-card">
         <h3>Everyone on one map</h3>
@@ -101,12 +131,35 @@
       </div>
       <div class="topic-card">
         <h3>Ends by itself</h3>
+        <div class="ring" aria-hidden="true">
+          <svg width="120" height="120" viewBox="0 0 200 200"><circle cx="100" cy="100" r="86" fill="none" stroke="#2A2F38" stroke-width="12"/><circle id="arc" cx="100" cy="100" r="86" fill="none" stroke="#66FCF1" stroke-width="12" stroke-linecap="round" pathLength="1" stroke-dasharray="1" stroke-dashoffset="0"/></svg>
+          <div class="t"><span id="clock">12:00</span><small id="clockSub" data-on="running" data-off="ended">running</small></div>
+        </div>
         <p>A convoy ends automatically after 12 hours at the latest. Nobody stays visible for days by accident.</p>
       </div>
     </div>
 
     <h2>DriveLink or a WhatsApp group?</h2>
-    <p>Most drives today are planned in WhatsApp groups. That works as long as everyone knows the way. The difference:</p>
+    <p>Most drives today are planned in WhatsApp groups. That works as long as everyone knows the way. Drag the red button:</p>
+    <div class="ba" id="ba">
+      <div class="pane left">
+        <span class="lbl">WhatsApp group</span>
+        <div class="chat" aria-hidden="true">
+          <div class="bub"><small>Max</small>Where are you guys???</div>
+          <div class="bub"><small>Lisa</small>Which exit was it again</div>
+          <div class="bub me">Send the link again</div>
+          <div class="bub"><small>Tom</small>At the petrol station, wait up</div>
+          <div class="bub"><small>Max</small>Which petrol station 😅</div>
+          <div class="bub me">Lost you all</div>
+        </div>
+      </div>
+      <div class="pane right" id="baRight">
+        <span class="lbl">DriveLink</span>
+        <div class="phone"><img src="../assets/screens/gruppe.jpg" alt="DriveLink group chat with a vote: which route are we driving on Saturday?" width="506" height="1100" loading="lazy"></div>
+      </div>
+      <div class="ba-handle" id="baHandle" role="slider" tabindex="0" aria-label="Move the comparison between WhatsApp group and DriveLink" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"><span aria-hidden="true">⇆</span></div>
+    </div>
+    <p>The difference at a glance:</p>
     <div class="compare-scroll">
       <table class="compare">
         <thead>
@@ -125,6 +178,17 @@
 
     <h2>Your privacy</h2>
     <p>You decide who sees you on the map: everyone, friends only or nobody. With "Everyone" and "Friends only", your convoy sees you too while you're driving together. A <strong>Ghost Zone</strong> around your home keeps you invisible there to everyone, including your convoy. No drive gives away where you live.</p>
+    <div class="stage-box">
+      <svg viewBox="0 0 900 340" role="img" aria-label="Animation: a car drives into the Ghost Zone around a house, disappears from the map there and reappears afterwards">
+        <g stroke="#1c2028" stroke-width="1"><path d="M0 70H900M0 170H900M0 270H900M150 0V340M450 0V340M750 0V340"/></g>
+        <path id="gpath" d="M60 290 C 220 290, 300 170, 450 170 S 700 60, 860 70" fill="none" stroke="#2A2F38" stroke-width="3" stroke-dasharray="6 8"/>
+        <circle cx="450" cy="170" r="110" fill="rgba(69,162,158,.07)" stroke="#45A29E" stroke-width="2" stroke-dasharray="8 8"/>
+        <g transform="translate(450 170)" fill="none" stroke="#ECEAE4" stroke-width="3" stroke-linejoin="round"><path d="M-18 4 L0 -14 L18 4 M-12 0 V16 H12 V0"/></g>
+        <text x="450" y="315" text-anchor="middle" fill="#45A29E" font-family="Plex Mono, monospace" font-size="15" font-weight="600" letter-spacing="1.5">GHOST ZONE</text>
+        <g id="gcar" style="transition: opacity .35s"><circle r="11" fill="#ECEAE4"/><circle r="20" fill="none" stroke="#ECEAE4" stroke-opacity=".35"/></g>
+        <text id="gstate" x="40" y="40" fill="#ECEAE4" font-family="Plex Mono, monospace" font-size="15" data-on="visible to friends" data-off="invisible · Ghost Zone">visible to friends</text>
+      </svg>
+    </div>
 
     <h2>Read on</h2>
     <div class="related">
