@@ -121,6 +121,9 @@ nav.site a {
 }
 nav.site a:hover, nav.site a[aria-current="page"] { color: var(--line); }
 nav.site a[aria-current="page"] { box-shadow: inset 0 -2px 0 var(--red); }
+/* Sprachumschalter DE/EN */
+nav.site a.lang { margin-left: 6px; padding: 0 12px; color: var(--line); }
+nav.site a.lang::before { content: ''; display: inline-block; width: 1px; height: 18px; background: var(--border); margin-right: 14px; }
 
 @media (max-width: 620px) {
   /* zweizeilig zu hoch zum Mitlaufen – scrollt mobil mit weg */
@@ -128,6 +131,9 @@ nav.site a[aria-current="page"] { box-shadow: inset 0 -2px 0 var(--red); }
   header.site .wrap { justify-content: center; }
   nav.site { justify-content: center; }
   nav.site a { padding: 0 8px; font-size: 12px; }
+  /* DE/EN oben rechts neben das Logo, damit die Kopfzeile zweizeilig bleibt */
+  nav.site a.lang { position: absolute; top: 8px; right: 12px; margin: 0; }
+  nav.site a.lang::before { display: none; }
 }
 
 /* ── Roadbook-Leiste (Mono-Zeile mit Linie) ─────────────── */
