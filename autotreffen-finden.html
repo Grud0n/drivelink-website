@@ -58,12 +58,36 @@
     </div>
 
     <h2>So findest du Treffen mit DriveLink</h2>
-    <ol class="steps">
-      <li><strong>Events öffnen.</strong> Im Tab „Events“ siehst du alle kommenden Treffen in deiner Umgebung, wahlweise als Liste oder auf der Karte.</li>
-      <li><strong>Filtern und sortieren.</strong> Nach Kategorie (Car-Meet, Trackday, Ausfahrt, Spontan) filtern und nach Datum oder Entfernung sortieren. Über die Suche findest du Treffen nach Name, Ort oder Veranstalter.</li>
-      <li><strong>Zusagen.</strong> Mit einem Tipp sagst du zu. Bei Treffen mit begrenzten Plätzen siehst du, wie viele noch frei sind.</li>
-      <li><strong>Hinfahren.</strong> Navigation zum Treffpunkt direkt aus dem Event starten, oder mit Freunden als Kolonne gemeinsam anreisen.</li>
-    </ol>
+    <div class="meet-story">
+      <ol class="ms-steps">
+        <li data-step="1"><strong>Events öffnen</strong><p>Im Tab „Events“ siehst du alle kommenden Treffen in deiner Umgebung, wahlweise als Liste oder auf der Karte.</p></li>
+        <li data-step="2"><strong>Filtern und sortieren</strong><p>Nach Kategorie (Car-Meet, Trackday, Ausfahrt, Spontan) filtern und nach Datum oder Entfernung sortieren. Über die Suche findest du Treffen nach Name, Ort oder Veranstalter.</p></li>
+        <li data-step="3"><strong>Antippen und zusagen</strong><p>Ein Tipp auf einen Pin zeigt das Treffen mit Datum und Entfernung. Über „Info“ öffnest du es und sagst zu. Bei begrenzten Plätzen siehst du, wie viele noch frei sind.</p></li>
+        <li data-step="4"><strong>Hinfahren</strong><p>Mit „Nav“ startet die Navigation zum Treffpunkt, oder ihr fahrt mit Freunden als Kolonne gemeinsam hin.</p></li>
+      </ol>
+      <div class="stick">
+        <div class="mm" id="mm" role="img" aria-label="Animation nach der DriveLink-App: Events auf der Karte von Dresden, Filter Car-Meet, ein Treffen am Freitag, 23. Oktober wird angetippt, über Nav startet die Route dorthin.">
+          <img class="mm-map" src="assets/screens/map-dresden.jpg" alt="" width="710" height="900" loading="lazy">
+          <svg class="mm-route" viewBox="0 0 710 900" preserveAspectRatio="none" aria-hidden="true">
+            <path pathLength="1" d="M400 470 L420 400 L470 330 L540 300 L560 262" fill="none" stroke="rgba(6,46,44,0.9)" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+            <path pathLength="1" d="M400 470 L420 400 L470 330 L540 300 L560 262" fill="none" stroke="#45A29E" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <div class="ev-pin hide" data-cat="meet" style="left:78.9%;top:27.8%"><div class="ev-bub" style="border-color:var(--cat-meet)"><img src="assets/screens/pin-meet.jpg" alt=""></div><div class="ev-tail" style="border-top-color:var(--cat-meet)"></div></div><div class="ev-pin hide" data-cat="meet" style="left:21.1%;top:48.9%"><div class="ev-bub" style="border-color:var(--cat-meet)"><img src="assets/screens/pin-level.jpg" alt=""></div><div class="ev-tail" style="border-top-color:var(--cat-meet)"></div></div><div class="ev-pin hide" data-cat="spontan" style="left:46.5%;top:13.3%"><div class="ev-bub" style="border-color:var(--cat-spontan);background:var(--cat-spontan)"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-flash"/></svg></div><div class="ev-tail" style="border-top-color:var(--cat-spontan)"></div></div><div class="ev-pin hide" data-cat="trackday" style="left:35.2%;top:82.2%"><div class="ev-bub" style="border-color:var(--cat-trackday);background:var(--cat-trackday)"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-speedometer"/></svg></div><div class="ev-tail" style="border-top-color:var(--cat-trackday)"></div></div><div class="ev-pin hide" data-cat="drive" style="left:84.5%;top:66.7%"><div class="ev-bub" style="border-color:var(--cat-drive);background:var(--cat-drive)"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-navigate"/></svg></div><div class="ev-tail" style="border-top-color:var(--cat-drive)"></div></div>
+          <div class="me-dot" style="left:56.3%;top:52.2%" aria-hidden="true"></div>
+          <div class="mm-chips" aria-hidden="true"><span class="app-chip on">Entdecken</span><span class="app-chip">Meine Events</span><span class="sep"></span><span class="app-chip" id="mmCat" data-all="Alle" data-meet="Car-Meet"><span>Alle</span><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-chevron-down"/></svg></span><span class="app-chip">Datum<svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-chevron-down"/></svg></span></div>
+          <div class="mm-panel" aria-hidden="true">
+            <div class="pp-pin"><img src="assets/screens/pin-meet.jpg" alt=""></div>
+            <div class="pp-txt"><b>Elbeparkreihe 12</b><span>Fr., 23. Okt. · 4,9 km</span></div>
+            <div class="pp-btn red"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-information-circle"/></svg>Info</div>
+            <div class="pp-btn teal" id="ppNav"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-navigate"/></svg>Nav</div>
+            <span class="pp-x"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-close"/></svg></span>
+          </div>
+        </div>
+        <div class="mm-dots" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i></div>
+      </div>
+    </div>
+
+    <div class="ticker bleed" aria-hidden="true" style="margin-top:8px;margin-bottom:8px"><div class="ticker-track"><span>Serie</span><span class="dot">●</span><span class="alt">Getunt</span><span class="dot">●</span><span>Oldtimer</span><span class="dot">●</span><span class="alt">Elektro</span><span class="dot">●</span><span>Motorrad</span><span class="dot">●</span><span class="alt">Car-Meet</span><span class="dot">●</span><span>Trackday</span><span class="dot">●</span><span>Serie</span><span class="dot">●</span><span class="alt">Getunt</span><span class="dot">●</span><span>Oldtimer</span><span class="dot">●</span><span class="alt">Elektro</span><span class="dot">●</span><span>Motorrad</span><span class="dot">●</span><span class="alt">Car-Meet</span><span class="dot">●</span><span>Trackday</span><span class="dot">●</span></div></div>
 
     <h2>Welche Treffen es in DriveLink gibt</h2>
     <div class="topic-grid">
@@ -86,8 +110,27 @@
     </div>
 
     <h2>Du organisierst selbst ein Treffen?</h2>
-    <p>In DriveLink legst du ein Event in wenigen Minuten an: Titel, Datum, Treffpunkt, Coverbild, bis zu drei Fotos und auf Wunsch ein Lageplan mit Ein- und Ausfahrt und Parkflächen. Wiederkehrende Treffen stellst du einmal als wöchentlich oder monatlich ein. Ein Treffen kann öffentlich oder privat sein, und du kannst die Zahl der Plätze begrenzen.</p>
-    <p>Du siehst jederzeit, wer zugesagt hat, und musst die Infos nicht in jeder Gruppe neu posten.</p>
+    <div class="maker">
+      <div>
+        <p>In DriveLink legst du ein Event in wenigen Minuten an: Titel, Datum, Treffpunkt, Coverbild, bis zu drei Fotos und auf Wunsch ein Lageplan mit Ein- und Ausfahrt und Parkflächen. Wiederkehrende Treffen stellst du einmal als wöchentlich oder monatlich ein. Ein Treffen kann öffentlich oder privat sein, und du kannst die Zahl der Plätze begrenzen.</p>
+        <p>Du siehst jederzeit, wer zugesagt hat, und musst die Infos nicht in jeder Gruppe neu posten.</p>
+      </div>
+      <div class="ce" id="mk" aria-hidden="true" data-title="Elbeparkreihe 12" data-ph="z. B. Stuttgarter Oldtimer-Treffen" data-dph="Datum &amp; Uhrzeit wählen" data-date="Freitag, 23. Oktober, 22:00 Uhr" data-prog="Schritt {n} / 5" data-next="Weiter" data-pub="Event veröffentlichen">
+        <div class="ce-head"><span class="ce-back"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-arrow-back"/></svg></span><b>Event erstellen</b></div>
+        <div class="ce-prog"><div class="ce-track"><i></i></div><span>Schritt 1 / 5</span></div>
+        <div class="ce-body">
+          <div class="ce-step s1"><h4>Grundinfos</h4><p>Wie soll dein Event heißen?</p>
+            <span class="ce-label">Titel<em> *</em></span><div class="ce-input" data-k="title"><span class="ph">z. B. Stuttgarter Oldtimer-Treffen</span></div>
+            <span class="ce-label">Kategorie<em> *</em></span><div class="ce-cats"><div class="ce-cat" data-c="meet"><span class="ci" style="background:#45A29E26;color:#45A29E"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-people"/></svg></span><span>Car-Meet</span><span class="ck" style="color:#45A29E"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-checkmark-circle"/></svg></span></div><div class="ce-cat" data-c="trackday"><span class="ci" style="background:#E6394626;color:#E63946"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-speedometer"/></svg></span><span>Trackday</span><span class="ck" style="color:#E63946"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-checkmark-circle"/></svg></span></div><div class="ce-cat" data-c="drive"><span class="ci" style="background:#F4A26126;color:#F4A261"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-navigate"/></svg></span><span>Ausfahrt</span><span class="ck" style="color:#F4A261"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-checkmark-circle"/></svg></span></div><div class="ce-cat" data-c="spontan"><span class="ci" style="background:#FFD70026;color:#FFD700"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-flash"/></svg></span><span>Spontan</span><span class="ck" style="color:#FFD700"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-checkmark-circle"/></svg></span></div></div></div>
+          <div class="ce-step s2 off-r"><h4>Datum &amp; Zeit</h4><p>Wann findet dein Event statt?</p>
+            <span class="ce-label">Startdatum &amp; Uhrzeit<em> *</em></span><div class="ce-input"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-calendar-outline"/></svg><span data-k="date"><span class="ph">Datum &amp; Uhrzeit wählen</span></span><svg class="ic chev" aria-hidden="true"><use href="assets/icons.svg#i-chevron-forward"/></svg></div>
+            <span class="ce-label">Wiederholung</span><div class="ce-rep"><div data-r="once" class="on"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-calendar"/></svg>Einmalig</div><div data-r="weekly"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-repeat"/></svg>Wöchentlich</div><div data-r="monthly"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-calendar-number"/></svg>Monatlich</div></div><div class="ce-hint">Das Event erscheint jede Woche am gleichen Wochentag zur gleichen Uhrzeit wieder.</div></div>
+          <div class="ce-step s3 ce-done off-r"><div class="ok"><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-checkmark-circle"/></svg>Event erstellt!</div><p class="ce-hint on" style="margin-top:0">Dein Event wurde veröffentlicht.</p>
+            <div class="ev-card"><img src="assets/screens/event-cover.jpg" alt="" loading="lazy"><div class="bd"><div class="dtile">Fr<b>23</b>Okt</div><div><div class="cat">Car-Meet</div><div class="ti">Elbeparkreihe 12</div><div class="me">22:00 · Dresden-Pieschen</div></div></div></div></div>
+        </div>
+        <div class="ce-foot"><div class="ce-next"><span>Weiter</span><svg class="ic" aria-hidden="true"><use href="assets/icons.svg#i-arrow-forward"/></svg></div></div>
+      </div>
+    </div>
 
     <h2>Ab wann ist die Karte voll?</h2>
     <p>DriveLink ist neu. In manchen Regionen sind noch wenige Treffen eingetragen. Je mehr Veranstalter ihre Termine eintragen, desto vollständiger wird die Karte. Wenn du ein Treffen kennst, das fehlt: Trag es ein oder sag dem Veranstalter Bescheid.</p>

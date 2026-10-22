@@ -102,19 +102,18 @@
     </ol>
 
     <h2>What the convoy does on the road</h2>
-    <div class="stage-box">
-      <div class="banner" id="banner" aria-hidden="true"><b>●</b> Lisa has fallen <span id="gap">1.2</span> km behind</div>
-      <svg viewBox="0 0 900 380" role="img" aria-label="Animation: four cars drive a route as a convoy, the navigator up front; one falls behind and the app shows a notice">
-        <g stroke="#1c2028" stroke-width="1"><path d="M0 60H900M0 140H900M0 220H900M0 300H900M120 0V380M300 0V380M480 0V380M660 0V380M840 0V380"/></g>
-        <path d="M40 320 C 180 120, 300 160, 400 230 S 600 330, 680 180 S 820 40, 870 90" fill="none" stroke="#1f2a2c" stroke-width="22" stroke-linecap="round"/>
-        <path id="road" class="glow" d="M40 320 C 180 120, 300 160, 400 230 S 600 330, 680 180 S 820 40, 870 90" fill="none" stroke="#66FCF1" stroke-width="4" stroke-linecap="round" style="filter: drop-shadow(0 0 6px rgba(102,252,241,.7))"/>
-        <g id="cars" font-family="Plex Mono, monospace" font-size="13" font-weight="600" text-anchor="middle">
-          <g transform="translate(560 300)"><circle r="20" fill="#E63946" fill-opacity=".18"/><circle r="9" fill="#E63946" stroke="#0B0C10" stroke-width="3"/><text y="-24" fill="#ECEAE4">NAV</text></g>
-          <g transform="translate(510 290)"><circle r="20" fill="#ECEAE4" fill-opacity=".18"/><circle r="9" fill="#ECEAE4" stroke="#0B0C10" stroke-width="3"/><text y="-24" fill="#ECEAE4">YOU</text></g>
-          <g transform="translate(460 270)"><circle r="20" fill="#ECEAE4" fill-opacity=".18"/><circle r="9" fill="#ECEAE4" stroke="#0B0C10" stroke-width="3"/><text y="-24" fill="#ECEAE4">TOM</text></g>
-          <g transform="translate(300 170)"><circle r="20" fill="#ECEAE4" fill-opacity=".18"/><circle r="9" fill="#ECEAE4" stroke="#0B0C10" stroke-width="3"/><text y="-24" fill="#ECEAE4">LISA</text></g>
-        </g>
-      </svg>
+    <div class="app-stage cv-stage" role="img" aria-label="Animation based on the DriveLink app: a convoy drives the gold route through Dresden, one member falls behind and the convoy panel shows a notice.">
+      <img class="mm-map" src="../assets/screens/map-dresden.jpg" alt="" width="710" height="900" loading="lazy">
+      <svg class="lay" viewBox="0 0 710 900" preserveAspectRatio="none" aria-hidden="true"><path class="cv-path" d="M20 245 C 150 225, 260 215, 340 228 S 470 262, 560 262 S 660 255, 700 250" fill="none" stroke="#FFD700" stroke-width="7" stroke-linecap="round"/></svg>
+      <div class="cv-wp" style="left:2.8%;top:27.2%"><svg class="ic" aria-hidden="true"><use href="../assets/icons.svg#i-flag"/></svg></div><div class="cv-wp" style="left:98.6%;top:27.8%"><svg class="ic" aria-hidden="true"><use href="../assets/icons.svg#i-trophy"/></svg></div>
+      <div class="cv-user"><div class="cv-bub"><svg class="ic" aria-hidden="true"><use href="../assets/icons.svg#i-car-sport"/></svg><span class="cv-badge"><svg class="ic" aria-hidden="true"><use href="../assets/icons.svg#i-car-sport"/></svg></span></div><div class="cv-lbl">max_gti</div></div><div class="cv-user"><div class="cv-bub"><svg class="ic" aria-hidden="true"><use href="../assets/icons.svg#i-car-sport"/></svg><span class="cv-badge"><svg class="ic" aria-hidden="true"><use href="../assets/icons.svg#i-car-sport"/></svg></span></div><div class="cv-lbl">tom.e46</div></div><div class="cv-user"><div class="cv-bub"><svg class="ic" aria-hidden="true"><use href="../assets/icons.svg#i-car-sport"/></svg><span class="cv-badge"><svg class="ic" aria-hidden="true"><use href="../assets/icons.svg#i-car-sport"/></svg></span></div><div class="cv-lbl">lisa_r</div></div><div class="me-dot" aria-hidden="true"></div>
+      <div class="cv-hud" aria-hidden="true">
+        <div class="cv-head"><span class="cv-ico"><svg class="ic" aria-hidden="true"><use href="../assets/icons.svg#i-car-sport"/></svg></span><span class="cv-name"><b>Sunday Run</b><span>4 members</span></span><span class="cv-chev"><svg class="ic" aria-hidden="true"><use href="../assets/icons.svg#i-chevron-forward"/></svg></span><span class="cv-leave"><svg class="ic" aria-hidden="true"><use href="../assets/icons.svg#i-exit-outline"/></svg></span></div>
+        <div class="cv-route"><div><i></i>Blaues Wunder</div><div class="con"></div><div><i class="end"></i>Bastei</div></div>
+        <div class="cv-strag"><div><p><svg class="ic" aria-hidden="true"><use href="../assets/icons.svg#i-warning"/></svg><span>lisa_r has fallen <span class="cv-dist">1.2 km</span> behind</span></p></div></div>
+        <div class="cv-nav"><svg class="ic" aria-hidden="true"><use href="../assets/icons.svg#i-navigate"/></svg>Navigate to start</div>
+        <div class="cv-acts"><span><svg class="ic" aria-hidden="true"><use href="../assets/icons.svg#i-chatbubble-ellipses-outline"/></svg>Convoy chat</span><i></i><span><svg class="ic" aria-hidden="true"><use href="../assets/icons.svg#i-flag-outline"/></svg>Set destination</span></div>
+      </div>
     </div>
     <div class="topic-grid">
       <div class="topic-card">
@@ -131,10 +130,7 @@
       </div>
       <div class="topic-card">
         <h3>Ends by itself</h3>
-        <div class="ring" aria-hidden="true">
-          <svg width="120" height="120" viewBox="0 0 200 200"><circle cx="100" cy="100" r="86" fill="none" stroke="#2A2F38" stroke-width="12"/><circle id="arc" cx="100" cy="100" r="86" fill="none" stroke="#66FCF1" stroke-width="12" stroke-linecap="round" pathLength="1" stroke-dasharray="1" stroke-dashoffset="0"/></svg>
-          <div class="t"><span id="clock">12:00</span><small id="clockSub" data-on="running" data-off="ended">running</small></div>
-        </div>
+        <div class="gcc" data-cycle data-k-run="CONVOY LIVE" data-k-end="CONVOY ENDED" data-m-run="started by max_gti · 4 riding along" data-m-end="This convoy is over." aria-hidden="true"><div class="gcc-k"><i></i><span>CONVOY LIVE</span></div><div class="gcc-n">Sunday Run</div><div class="gcc-m">started by max_gti · 4 riding along</div><div class="gcc-b"><svg class="ic" aria-hidden="true"><use href="../assets/icons.svg#i-car-sport"/></svg>Ride along</div></div>
         <p>A convoy ends automatically after 12 hours at the latest. Nobody stays visible for days by accident.</p>
       </div>
     </div>
@@ -177,17 +173,15 @@
     <p>Your group chat is still great for banter. DriveLink is for the part where you actually drive together.</p>
 
     <h2>Your privacy</h2>
-    <p>You decide who sees you on the map: everyone, friends only or nobody. With "Everyone" and "Friends only", your convoy sees you too while you're driving together. A <strong>Ghost Zone</strong> around your home keeps you invisible there to everyone, including your convoy. No drive gives away where you live.</p>
-    <div class="stage-box">
-      <svg viewBox="0 0 900 340" role="img" aria-label="Animation: a car drives into the Ghost Zone around a house, disappears from the map there and reappears afterwards">
-        <g stroke="#1c2028" stroke-width="1"><path d="M0 70H900M0 170H900M0 270H900M150 0V340M450 0V340M750 0V340"/></g>
-        <path id="gpath" d="M60 290 C 220 290, 300 170, 450 170 S 700 60, 860 70" fill="none" stroke="#2A2F38" stroke-width="3" stroke-dasharray="6 8"/>
-        <circle cx="450" cy="170" r="110" fill="rgba(69,162,158,.07)" stroke="#45A29E" stroke-width="2" stroke-dasharray="8 8"/>
-        <g transform="translate(450 170)" fill="none" stroke="#ECEAE4" stroke-width="3" stroke-linejoin="round"><path d="M-18 4 L0 -14 L18 4 M-12 0 V16 H12 V0"/></g>
-        <text x="450" y="315" text-anchor="middle" fill="#45A29E" font-family="Plex Mono, monospace" font-size="15" font-weight="600" letter-spacing="1.5">GHOST ZONE</text>
-        <g id="gcar" style="transition: opacity .35s"><circle r="11" fill="#ECEAE4"/><circle r="20" fill="none" stroke="#ECEAE4" stroke-opacity=".35"/></g>
-        <text id="gstate" x="40" y="40" fill="#ECEAE4" font-family="Plex Mono, monospace" font-size="15" data-on="visible to friends" data-off="invisible · Ghost Zone">visible to friends</text>
-      </svg>
+    <div class="privacy-row">
+      <p>You decide who sees you on the map: everyone, friends only or nobody. With "Everyone" and "Friends only", your convoy sees you too while you're driving together. A <strong>Ghost Zone</strong> around your home keeps you invisible there to everyone, including your convoy. No drive gives away where you live.</p>
+    <div class="app-stage gz-stage" role="img" aria-label="Animation based on the DriveLink app: your location drives into your Ghost Zone, GHOST MODE appears at the top, then you leave the zone again.">
+      <img class="mm-map" src="../assets/screens/map-dresden.jpg" alt="" width="710" height="900" loading="lazy">
+      <svg class="lay" viewBox="0 0 710 900" preserveAspectRatio="none" aria-hidden="true"><path class="gz-path" d="M60 820 C 200 700, 260 560, 330 500 S 520 300, 660 180" fill="none" stroke="none"/></svg>
+      <div class="gz-zone" data-x="330" data-y="500" data-r="120" style="left:46.5%;top:55.6%;width:33.8%;height:26.7%"></div>
+      <div class="me-dot" aria-hidden="true"></div>
+      <div class="gz-badge" aria-hidden="true"><svg class="ic" aria-hidden="true"><use href="../assets/icons.svg#i-eye-off"/></svg>GHOST MODE</div>
+    </div>
     </div>
 
     <h2>Read on</h2>
