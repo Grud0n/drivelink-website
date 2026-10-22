@@ -1,26 +1,52 @@
+// ============================================================
+//  Animationen beim Scrollen
+//  - .reveal / svg[data-draw] bekommen ".in", sobald sie
+//    ins Bild kommen (CSS macht den Rest). Bei Linien-SVGs wird das SVG
+//    selbst beobachtet und ".in" an .draw/.draw-end darin weitergegeben –
+//    einzelne <path>-Elemente meldet der IntersectionObserver unzuverlässig.
+//  - [data-count] zählt von 0 hoch
+//  Ohne JS oder mit "Bewegung reduzieren" ist alles sofort sichtbar
+//  (die Klasse "js" setzt ein Einzeiler im <head>).
+// ============================================================
 (function () {
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (reduceMotion) return;
+  var targets = document.querySelectorAll('.reveal, svg[data-draw], [data-count]');
 
-  // Parallax auf Hero-Blobs & Phone-Mockups. Die Phone-Mockups haben ein
-  // rotate() im CSS (per Klasse) – das muss beim Setzen von transform per JS
-  // mit übernommen werden, sonst geht es beim Scrollen verloren.
-  var parallaxEls = Array.prototype.slice.call(document.querySelectorAll('[data-parallax]'));
-
-  function rotationFor(el) {
-    if (el.classList.contains('phone-left'))  return 'rotate(-13deg)';
-    if (el.classList.contains('phone-right')) return 'rotate(12deg)';
-    return '';
+  function countUp(el) {
+    var end = parseInt(el.getAttribute('data-count'), 10) || 0;
+    if (reduceMotion || end === 0) { el.textContent = end; return; }
+    var start = null;
+    var dur = 900;
+    function step(ts) {
+      if (start === null) start = ts;
+      var p = Math.min((ts - start) / dur, 1);
+      el.textContent = Math.round(end * (1 - Math.pow(1 - p, 3)));
+      if (p < 1) requestAnimationFrame(step);
+    }
+    el.textContent = '0';
+    requestAnimationFrame(step);
   }
 
-  function tick() {
-    var y = window.scrollY || window.pageYOffset;
-    parallaxEls.forEach(function (el) {
-      var speed = parseFloat(el.getAttribute('data-parallax')) || 0.2;
-      el.style.transform = rotationFor(el) + ' translateY(' + (y * speed * -1) + 'px)';
+  function show(el) {
+    el.classList.add('in');
+    if (el.hasAttribute('data-draw')) {
+      Array.prototype.forEach.call(el.querySelectorAll('.draw, .draw-end'), function (d) { d.classList.add('in'); });
+    }
+    if (el.hasAttribute('data-count')) countUp(el);
+  }
+
+  if (!('IntersectionObserver' in window)) {
+    Array.prototype.forEach.call(targets, show);
+    return;
+  }
+
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (!e.isIntersecting) return;
+      show(e.target);
+      io.unobserve(e.target);
     });
-  }
+  }, { rootMargin: '0px 0px -10% 0px', threshold: 0.15 });
 
-  window.addEventListener('scroll', tick, { passive: true });
-  tick();
+  Array.prototype.forEach.call(targets, function (el) { io.observe(el); });
 })();

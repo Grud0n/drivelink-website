@@ -3,134 +3,234 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DriveLink – Die Auto-Community für echte Petrolheads</title>
-  <meta name="description" content="DriveLink ist die Social-App für Autoenthusiasten: Live-Karte mit Spots, Routen teilen, Convoys, Events, Garage und mehr.">
-  <link rel="icon" type="image/png" href="assets/drivelink-logo.png">
-  <link rel="apple-touch-icon" href="assets/drivelink-logo.png">
+  <title>DriveLink – App für Autotreffen &amp; gemeinsame Ausfahrten (iPhone)</title>
+  <meta name="description" content="Kostenlose iPhone-App für Autotreffen und gemeinsame Ausfahrten: Car-Meets in deiner Nähe finden, Routen planen und als Kolonne fahren.">
+  <link rel="canonical" href="https://drivelink-app.de/">
+  <!-- Nach App-Store-Freigabe wieder rein: <meta name="apple-itunes-app" content="app-id=6761045574"> -->
+  <meta name="theme-color" content="#0B0C10">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="DriveLink">
+  <meta property="og:title" content="DriveLink – App für Autotreffen &amp; gemeinsame Ausfahrten">
+  <meta property="og:description" content="Car-Meets finden, Routen planen, als Kolonne fahren. Kostenlos fürs iPhone.">
+  <meta property="og:url" content="https://drivelink-app.de/">
+  <meta property="og:image" content="https://drivelink-app.de/assets/screens/planer.jpg">
+  <meta property="og:locale" content="de_DE">
+  <link rel="icon" type="image/png" href="assets/drivelink-logo-180.png">
+  <link rel="apple-touch-icon" href="assets/drivelink-logo-180.png">
+  <link rel="preload" href="assets/fonts/montserrat-900i.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add('js');</script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "MobileApplication",
+        "@id": "https://drivelink-app.de/#app",
+        "name": "DriveLink",
+        "alternateName": "DriveLink – Auto-Community",
+        "description": "Kostenlose iPhone-App für Autotreffen und gemeinsame Ausfahrten: Car-Meets, Tuning- und Oldtimer-Treffen in der Nähe finden, Events anlegen, Routen planen und aufzeichnen, in Gruppen abstimmen und als Kolonne mit Live-Karte fahren.",
+        "url": "https://drivelink-app.de/",
+        "downloadUrl": "https://testflight.apple.com/join/Xghwh1vr",
+        "operatingSystem": "iOS",
+        "applicationCategory": "SocialNetworkingApplication",
+        "inLanguage": ["de", "en"],
+        "image": "https://drivelink-app.de/assets/drivelink-logo.png",
+        "screenshot": [
+          "https://drivelink-app.de/assets/screens/planer.jpg",
+          "https://drivelink-app.de/assets/screens/events.jpg",
+          "https://drivelink-app.de/assets/screens/gruppe.jpg",
+          "https://drivelink-app.de/assets/screens/karte-3d.jpg",
+          "https://drivelink-app.de/assets/screens/garage.jpg"
+        ],
+        "featureList": [
+          "Autotreffen und Car-Meets in der Nähe finden",
+          "Events anlegen, auch wiederkehrend und mit Lageplan",
+          "Routen planen und aufzeichnen",
+          "Gruppen mit Chat und Routen-Abstimmung",
+          "Kolonnen mit Live-Karte aller Mitfahrer",
+          "Ghost Zones und einstellbare Sichtbarkeit"
+        ],
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+        "publisher": { "@id": "https://drivelink-app.de/#org" }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://drivelink-app.de/#org",
+        "name": "DriveLink",
+        "url": "https://drivelink-app.de/",
+        "logo": "https://drivelink-app.de/assets/drivelink-logo.png",
+        "email": "support.drivelink.app@gmail.com",
+        "sameAs": [
+          "https://www.instagram.com/drivelink.app/"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://drivelink-app.de/#website",
+        "name": "DriveLink",
+        "url": "https://drivelink-app.de/",
+        "inLanguage": "de",
+        "publisher": { "@id": "https://drivelink-app.de/#org" }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
+
 
   <header class="site">
     <div class="wrap">
       <a href="index.html" class="brand">
-        <img src="assets/drivelink-logo.png" alt="DriveLink Logo">
+        <img src="assets/drivelink-logo-180.png" alt="" width="28" height="28">
         DriveLink
       </a>
-      <nav class="site">
+      <nav class="site" aria-label="Hauptmenü">
+        <a href="autotreffen-finden.html">Autotreffen</a>
+        <a href="gemeinsame-ausfahrten.html">Ausfahrten</a>
+        <a href="faq.html">FAQ</a>
         <a href="support.html">Support</a>
-        <a href="datenschutz.html">Datenschutz</a>
-        <a href="impressum.html">Impressum</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <section class="hero wrap">
-      <div class="bg-decor">
-        <div class="blob blob-red" data-parallax="0.15"></div>
-        <div class="blob blob-teal" data-parallax="0.28"></div>
-      </div>
+    <section class="hero">
+      <div class="wrap">
+        <svg class="route-svg" data-draw viewBox="0 0 1200 300" preserveAspectRatio="xMidYMax meet" aria-hidden="true">
+          <path class="glow draw" pathLength="1" d="M30 262 C 150 150, 250 170, 350 210 S 520 270, 610 175 S 770 70, 870 130 S 1040 205, 1140 78"
+                fill="none" stroke="#66FCF1" stroke-width="7" stroke-linecap="round"/>
+          <circle cx="30" cy="262" r="13" fill="#0B0C10" stroke="#ECEAE4" stroke-width="6"/>
+          <g transform="translate(1140 78) rotate(-52)">
+            <polygon class="glow draw-end" points="-2,-16 30,0 -2,16" fill="#66FCF1"/>
+          </g>
+        </svg>
 
-      <div class="hero-copy">
-        <div class="eyebrow"><span class="dot"></span> Bald im App Store</div>
-        <h1>Die Auto-Community <span>für echte Petrolheads</span></h1>
-        <p class="tagline">Live-Karte mit Spots &amp; Radar, Routen aufzeichnen und teilen, Convoys bilden, Events organisieren und deine Garage zeigen – alles in einer App.</p>
+        <div class="rb-bar"><span>DriveLink Roadbook</span><span>Vol.01 / Die App</span></div>
+
+        <h1 class="mega anim">
+          <span class="l c-red">Treffen finden.</span>
+          <span class="l c-line">Zusammen fahren.</span>
+          <span class="l c-teal">Eine App.</span>
+        </h1>
+
+        <div class="hero-grid">
+          <div>
+            <p class="kicker-line">car-meets · ausfahrten · kolonnen · gruppen · garage</p>
+            <p class="lead"><strong>DriveLink</strong> ist die kostenlose iPhone-App für Autotreffen und gemeinsame Ausfahrten. Du findest Car-Meets in deiner Nähe, planst die Route mit deiner Crew und ihr fahrt als Kolonne los.</p>
+            <div class="cta-row">
+              <a class="btn btn-primary" href="https://testflight.apple.com/join/Xghwh1vr">Beta testen <span class="arr" aria-hidden="true">→</span></a>
+              <a class="btn btn-secondary" href="#roadbook">So läuft's</a>
+            </div>
+            <p class="fine">iPhone · kostenlos · Beta über TestFlight, bald im App Store</p>
+          </div>
+
+          <div class="hero-visual">
+            <div class="phone phone-a float-a">
+              <img src="assets/screens/karte-3d.jpg" alt="DriveLink Live-Karte von Dresden mit Spots und Sichtbarkeit „Nur Freunde“" width="506" height="1100">
+            </div>
+            <div class="phone phone-b float-b">
+              <img src="assets/screens/planer.jpg" alt="DriveLink Routenplaner: Tour von Dresden durch die Sächsische Schweiz, 82 km mit 4 Stopps" width="506" height="1100" fetchpriority="high">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="ticker" role="img" aria-label="Car-Meet, Trackday, Ausfahrt, Oldtimer, Tuning, Elektro, Motorrad, Spontan, Kolonne">
+      <div class="ticker-track" aria-hidden="true">
+        <span>Car-Meet</span><span class="dot">●</span><span class="alt">Trackday</span><span class="dot">●</span><span>Ausfahrt</span><span class="dot">●</span><span class="alt">Oldtimer</span><span class="dot">●</span><span>Tuning</span><span class="dot">●</span><span class="alt">Elektro</span><span class="dot">●</span><span>Motorrad</span><span class="dot">●</span><span class="alt">Spontan</span><span class="dot">●</span><span>Kolonne</span><span class="dot">●</span>
+        <span>Car-Meet</span><span class="dot">●</span><span class="alt">Trackday</span><span class="dot">●</span><span>Ausfahrt</span><span class="dot">●</span><span class="alt">Oldtimer</span><span class="dot">●</span><span>Tuning</span><span class="dot">●</span><span class="alt">Elektro</span><span class="dot">●</span><span>Motorrad</span><span class="dot">●</span><span class="alt">Spontan</span><span class="dot">●</span><span>Kolonne</span><span class="dot">●</span>
+      </div>
+    </div>
+
+    <div class="wrap">
+      <section class="specs reveal" aria-label="DriveLink in Zahlen">
+        <div class="spec"><span class="num"><span data-count="0">0</span><small>€</small></span><span class="lbl">kostet die App</span></div>
+        <div class="spec"><span class="num"><span data-count="4">4</span></span><span class="lbl">Treffen-Arten: Car-Meet, Trackday, Ausfahrt, Spontan</span></div>
+        <div class="spec"><span class="num"><span data-count="3">3</span></span><span class="lbl">Stufen Sichtbarkeit: alle, Freunde, niemand</span></div>
+        <div class="spec"><span class="num"><span data-count="12">12</span><small>h</small></span><span class="lbl">dann endet jede Kolonne von selbst</span></div>
+      </section>
+
+      <section class="stages" id="roadbook">
+        <div class="rb-bar"><span>Das Roadbook</span><span>4 Etappen</span></div>
+
+        <article class="stage">
+          <div class="stage-copy reveal">
+            <span class="stage-no">01</span>
+            <h2>Treffen finden</h2>
+            <p class="meta">Car-Meets · Trackdays · Ausfahrten</p>
+            <p>Alle Treffen in deiner Gegend auf einer Karte statt verstreut in Storys. Nach Datum oder Entfernung sortieren, zusagen, Navigation zum Treffpunkt starten.</p>
+            <p>Du organisierst selbst? Event mit Lageplan anlegen, einmal als wöchentlich einstellen, fertig.</p>
+            <a class="more" href="autotreffen-finden.html">Autotreffen finden →</a>
+          </div>
+          <div class="stage-shot reveal d1">
+            <div class="phone"><img src="assets/screens/events.jpg" alt="DriveLink Events: nächstes Car-Meet in Dresden mit Datum und Entfernung" width="506" height="1100" loading="lazy"></div>
+          </div>
+        </article>
+
+        <article class="stage flip">
+          <div class="stage-copy reveal">
+            <span class="stage-no">02</span>
+            <h2>Mit der Crew planen</h2>
+            <p class="meta">Gruppen-Chat · Routen-Abstimmung</p>
+            <p>Gruppe gründen, Routen teilen, abstimmen. Die Route mit den meisten Stimmen wird markiert. Kein Link, der im Chatverlauf untergeht.</p>
+            <a class="more" href="gemeinsame-ausfahrten.html">Gemeinsame Ausfahrten →</a>
+          </div>
+          <div class="stage-shot reveal d1">
+            <div class="phone"><img src="assets/screens/gruppe.jpg" alt="DriveLink Gruppen-Chat mit Abstimmung: Welche Route fahren wir Samstag?" width="506" height="1100" loading="lazy"></div>
+          </div>
+        </article>
+
+        <article class="stage">
+          <div class="stage-copy reveal">
+            <span class="stage-no">03</span>
+            <h2>Als Kolonne fahren</h2>
+            <p class="meta">Live-Karte · Navigator · Ghost Zones</p>
+            <p>Aus der Gewinner-Route startest du die Kolonne. Alle Mitfahrer live auf einer Karte, und fällt jemand zurück, siehst du es.</p>
+            <p>Du entscheidest, wer dich sieht. Um dein Zuhause bleibst du mit einer Ghost Zone unsichtbar, auch für die Kolonne.</p>
+          </div>
+          <div class="stage-shot reveal d1">
+            <div class="phone"><img src="assets/screens/karte-3d.jpg" alt="DriveLink Live-Karte in 3D mit Sichtbarkeit „Nur Freunde“" width="506" height="1100" loading="lazy"></div>
+          </div>
+        </article>
+
+        <article class="stage flip">
+          <div class="stage-copy reveal">
+            <span class="stage-no">04</span>
+            <h2>Deine Garage</h2>
+            <p class="meta">Profil · Fotos · Umbauten</p>
+            <p>Dein Auto ist dein Profil: Fotos, Umbauten, gefahrene Kilometer. So sieht jeder auf dem Treffen gleich, was du fährst.</p>
+          </div>
+          <div class="stage-shot reveal d1">
+            <div class="phone"><img src="assets/screens/garage.jpg" alt="DriveLink Profil mit Garage: Volkswagen Golf GTI" width="506" height="1100" loading="lazy"></div>
+          </div>
+        </article>
+      </section>
+
+      <section class="finale reveal">
+        <h2 class="mega"><span class="l c-line">Dein nächstes</span><span class="l c-red">Treffen wartet.</span></h2>
+        <p>Kostenlos fürs iPhone. Gebaut in Dresden, von einem, der selbst gern fährt.</p>
         <div class="cta-row">
-          <a class="btn btn-primary" href="https://apps.apple.com/app/id6761045574">
-            Bald im App Store
-          </a>
-          <a class="btn btn-secondary" href="support.html">Support kontaktieren</a>
+          <a class="btn btn-primary" href="https://testflight.apple.com/join/Xghwh1vr">Beta testen <span class="arr" aria-hidden="true">→</span></a>
+          <a class="btn btn-secondary" href="faq.html">Fragen &amp; Antworten</a>
         </div>
-        <p class="badge">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.5 2h-11A2.5 2.5 0 0 0 4 4.5v15A2.5 2.5 0 0 0 6.5 22h11a2.5 2.5 0 0 0 2.5-2.5v-15A2.5 2.5 0 0 0 17.5 2z"/><path d="M11 18h2"/></svg>
-          iOS · kostenlos
-        </p>
-      </div>
-
-      <div class="hero-visual">
-        <div class="phone-mock phone-left" data-parallax="0.1">
-          <img src="assets/screenshot-friends.jpg" alt="DriveLink Freunde-Screen">
-        </div>
-        <div class="phone-mock phone-center" data-parallax="0.22">
-          <img src="assets/screenshot-map.jpg" alt="DriveLink Live-Karte mit Spots und Radar-Warnungen">
-        </div>
-        <div class="phone-mock phone-right" data-parallax="0.14">
-          <img src="assets/screenshot-events.jpg" alt="DriveLink Events-Screen">
-        </div>
-      </div>
-    </section>
-
-    <section class="features wrap">
-      <div class="section-head">
-        <h2>Alles für deine Auto-Leidenschaft</h2>
-        <p>Eine App, die Community, Strecke und Garage zusammenbringt.</p>
-      </div>
-
-      <div class="feature" style="--accent: var(--teal); --accent-soft: var(--teal-soft);">
-        <div class="icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        </div>
-        <h3>Live-Karte &amp; Spots</h3>
-        <p>Entdecke Auto-Spots und andere Petrolheads in deiner Nähe in Echtzeit.</p>
-      </div>
-      <div class="feature" style="--accent: var(--red); --accent-soft: var(--red-soft);">
-        <div class="icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19c2-6 4-9 8-9s2 6 6 6 2-7 2-7"/><circle cx="4" cy="19" r="1.4" fill="currentColor" stroke="none"/><circle cx="20" cy="9" r="1.4" fill="currentColor" stroke="none"/></svg>
-        </div>
-        <h3>Routen aufzeichnen</h3>
-        <p>Nimm deine schönsten Strecken auf und teile sie mit der Community.</p>
-      </div>
-      <div class="feature" style="--accent: var(--warning); --accent-soft: var(--warning-soft);">
-        <div class="icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 13l1.6-4.8A2 2 0 0 1 6.5 7h11a2 2 0 0 1 1.9 1.2L21 13"/><path d="M3 13h18v4a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1v-1H6v1a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-4z"/><circle cx="7" cy="16" r="1"/><circle cx="17" cy="16" r="1"/></svg>
-        </div>
-        <h3>Convoys &amp; Encounters</h3>
-        <p>Fahrt gemeinsam los oder sammle Begegnungen mit anderen Autofans.</p>
-      </div>
-      <div class="feature" style="--accent: var(--gold); --accent-soft: var(--gold-soft);">
-        <div class="icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="16" rx="2"/><path d="M3 9.5h18M8 3v3M16 3v3"/><path d="M8 14l2.5 2.5L16 11"/></svg>
-        </div>
-        <h3>Events &amp; Treffen</h3>
-        <p>Finde Car-Meets in deiner Region oder organisiere dein eigenes Treffen.</p>
-      </div>
-      <div class="feature" style="--accent: var(--purple); --accent-soft: var(--purple-soft);">
-        <div class="icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4"/><path d="M6 4h12v5a6 6 0 0 1-12 0V4z"/><path d="M6 6H4a2 2 0 0 0 0 4h2M18 6h2a2 2 0 0 1 0 4h-2"/></svg>
-        </div>
-        <h3>Garage &amp; Leaderboards</h3>
-        <p>Zeig dein Auto in deiner Garage und miss dich mit anderen auf dem Leaderboard.</p>
-      </div>
-      <div class="feature" style="--accent: var(--teal); --accent-soft: var(--teal-soft);">
-        <div class="icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8V6a6 6 0 0 1 12 0v2"/><rect x="3" y="8" width="18" height="13" rx="2"/><path d="M9 12a3 3 0 0 0 6 0"/></svg>
-        </div>
-        <h3>Marktplatz</h3>
-        <p>Kaufe und verkaufe Teile, Zubehör und Fahrzeuge direkt in der App.</p>
-      </div>
-    </section>
-
-    <section class="wrap">
-      <div class="cta-band">
-        <h2>Bereit für deine Community?</h2>
-        <p>DriveLink kommt bald für iOS – schau vorbei und sichere dir Beta-Infos.</p>
-        <div class="cta-row" style="justify-content:center;">
-          <a class="btn btn-primary" href="https://apps.apple.com/app/id6761045574">Bald im App Store</a>
-          <a class="btn btn-secondary" href="support.html">Support kontaktieren</a>
-        </div>
-      </div>
-    </section>
+      </section>
+    </div>
   </main>
 
   <footer class="site">
     <div class="wrap">
       <div class="links">
+        <a href="autotreffen-finden.html">Autotreffen finden</a>
+        <a href="gemeinsame-ausfahrten.html">Gemeinsame Ausfahrten</a>
+        <a href="faq.html">FAQ</a>
         <a href="support.html">Support</a>
         <a href="datenschutz.html">Datenschutz</a>
         <a href="impressum.html">Impressum</a>
       </div>
-      <p class="copy">© 2026 DriveLink</p>
+      <p class="copy">drivelink-app.de · made in dresden · © 2026 · <a href="https://www.instagram.com/drivelink.app/">instagram</a></p>
     </div>
   </footer>
 
